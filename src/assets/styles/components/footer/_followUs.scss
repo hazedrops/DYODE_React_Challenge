@@ -1,0 +1,18 @@
+.followUs {
+  padding-top: 0;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  } 
+
+  .followIcons {
+    display: flex;
+    flex-direction: row;
+    font-size: 26px;
+    width: 5em;
+    justify-content: space-between;
+  }
+}
+
+

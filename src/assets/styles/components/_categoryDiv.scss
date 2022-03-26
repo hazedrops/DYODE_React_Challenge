@@ -1,0 +1,85 @@
+.categorySection {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+
+  .categoryDiv {
+    background-color: $color-white;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 9px;    
+
+    .categoryItem {      
+      width: 163px;
+      height: 213px;
+      position: relative;
+
+      @include wide {
+        width: 435px;
+        height: 569px;
+      }
+
+      @include desktop {
+        min-width: 310px;
+        width: 12.65vw;
+        height: auto;
+      }
+
+      @include tablet {
+        min-width: 232px;
+        width: 9.5vw;
+        height: auto;
+      }
+
+      @include mobile { 
+        min-width: 163px;
+        width: 4.6vw;
+        height: auto;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      h2 {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 42px;
+        background-color: $color-green;
+        color: white;
+        font-family: $font-cursive;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      &.lastItem {
+        border: 2px solid orange;
+        grid-column: 1 / span 2;
+        width: 100%;
+        height: 213px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    @include media(desktop, wide) {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 50px 48px;
+    }
+
+    @include media(mobile, tablet) {
+      grid-template-columns: repeat(3, 1fr) !important;
+      padding: 20px 10px;
+      margin: 0;
+    }
+  }
+}

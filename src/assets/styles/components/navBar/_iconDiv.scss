@@ -1,0 +1,30 @@
+.iconDiv {
+  display: flex;
+  position: absolute;
+  right: 1.2em;
+  align-items: center;
+  justify-content: space-between;
+  width: 8em;
+  color: $color-white;
+  font-size: 0.7em;
+
+  @include media(tablet, desktop, wide) {
+    position: static;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// @media (min-width: 767px) {
+//   .iconDiv {
+//     position: static;
+//   }
+// }
+
+// .iconDiv svg {
+//   width: 20px;
+//   height: 20px;
+// }
